@@ -1,42 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="wrap_content"
+    android:background="#c3f584"
+    android:padding="10dp"
+    android:layout_margin="10dp"
+    android:id="@+id/recyclerline">
 
-    <!-- RecyclerView ocupa o espaço acima dos botões -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerline"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/buttonContainer"
-        android:layout_margin="10dp" />
-
-    <!-- LinearLayout para os botões na parte inferior -->
-    <LinearLayout
-        android:id="@+id/buttonContainer"
-        android:layout_width="match_parent"
+    <!-- Nome da Escola -->
+    <TextView
+        android:id="@+id/nomeEscola"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
+        android:text="Nome da Escola"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="4dp"/>
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="getSingle"
-            android:text="Get single" />
+    <!-- Curso -->
+    <TextView
+        android:id="@+id/curso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Curso"
+        android:padding="5dp"
+        android:layout_below="@id/nomeEscola"
+        android:layout_alignStart="@id/nomeEscola"/>
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="post"
-            android:text="POST" />
-
-    </LinearLayout>
-
+    <!-- Estágio -->
+    <TextView
+        android:id="@+id/estagio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estágio"
+        android:textStyle="bold"
+        android:layout_below="@id/curso"
+        android:padding="10dp"
+        android:textSize="16sp"/>
 </RelativeLayout>

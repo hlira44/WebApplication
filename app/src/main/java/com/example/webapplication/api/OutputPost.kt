@@ -1,4 +1,8 @@
 package com.example.webapplication.api
 
-class OutputPost {
-}
+data class OutputPost(
+    val id: Int,
+    val title: String
+)
+
+
