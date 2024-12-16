@@ -21,6 +21,7 @@ class EscolaAdapter(private val escolaList: List<Escola>) : RecyclerView.Adapter
         return EscolaViewHolder(view)
     }
 
+
     override fun onBindViewHolder(holder: EscolaViewHolder, position: Int) {
         val escola = escolaList[position]
         holder.name.text = escola.name // Nome da escola
